@@ -20,6 +20,9 @@ And cd into our dia3-nodeApp
 
 ```bash
 $ cd ./material-bootcamp/dia-3/dia3-nodeApp/
+#for windows
+$ cd .\material-bootcamp\dia-3\dia3-nodeApp
+
 ```
 
 This is a basic node-JS express server that will be using to upload to our registry
