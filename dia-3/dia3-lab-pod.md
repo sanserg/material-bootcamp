@@ -11,9 +11,13 @@ Check the connectivity
 ```bash
 kubectl get pods --all-namespaces
 ```
+Create a new namespace
+```bash
+kubectl create namespace student<studentId>
+```
 Set the context to your namespace
 ```bash
-kubectl config set-context --current --namespace=<studentId>
+kubectl config set-context --current --namespace=student<studentId>
 ```
 check if the namespace is set 
 ```bash
@@ -37,7 +41,7 @@ The specifications of this pod are as follows:
 - The container needs a containerPort of 80.
 - Set the command to run `["nginx"]`
 - Pass in the `["-g", "daemon off;", "-q"]` args to run nginx in quiet mode.
-- Create the pod in the " < studentId >" namespace.
+- Create the pod in the " student< studentId >" namespace.
 
 ### Verification
 
