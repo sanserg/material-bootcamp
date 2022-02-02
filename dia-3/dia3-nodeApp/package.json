@@ -1,0 +1,20 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "Template Node app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Iago Godoy",
+  "license": "ISC",
+  "dependencies": {
+    "cfenv": "^1.0.4",
+    "depd": "^2.0.0",
+    "express": "^4.16.3"
+  }
+}
