@@ -13,7 +13,7 @@ Please make sure to login on your IBM Cloud Account CLI before starting this lab
 Let's download our sample application
 
 ```bash
-$ git clone https://github.com/iagomlgodoy/material-bootcamp
+$ git clone https://github.com/iagomlgodoy/bootcamp-material
 ```
 
 And cd into our dia3-nodeApp
