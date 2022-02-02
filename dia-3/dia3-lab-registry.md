@@ -80,26 +80,26 @@ OK
 And now we rebuild our image in order to tag it to our repository 
 
 ```bash
-$ docker build -t us.icr.io/tecban-bootcamp/<studentID>-basic-express:1 .
+$ docker build -t us.icr.io/< namespace >/<studentID>-basic-express:1 .
 ```
 
 At this point we have tagged the image to our repository but it still hasn't been uploaded to it. We can check that by running the following command:
 
 ```bash
-$ ibmcloud cr image-list --restrict tecban-bootcamp
+$ ibmcloud cr image-list --restrict < namespace >
 ```
 
 
 Now we push our image to the registry:
 
 ```bash
-$ docker push us.icr.io/tecban-bootcamp/<studentID>-basic-express:1
+$ docker push us.icr.io/< namespace >/<studentID>-basic-express:1
 ```
 
 and the output once the process is completed should look like this:
 
 ```bash
-The push refers to repository [us.icr.io/tecban-bootcamp/student57-basic-express]
+The push refers to repository [us.icr.io/< namespace >/student57-basic-express]
 b577b65cf6ea: Pushed 
 06a73bff2c4e: Pushed 
 061c173aa9f0: Pushed 
@@ -116,12 +116,12 @@ d6e0d602719c: Pushed
 And now when we check our repository we should see our image uploaded (please note that there might be other students images there as well)
 
 ```bash
-$ ibmcloud cr image-list --restrict tecban-bootcamp
+$ ibmcloud cr image-list --restrict < namespace >
 
 Listing images...
 
 Repository                                               Tag   Digest         Namespace              Created          Size     Security status   
-us.icr.io/tecban-bootcamp/student57-basic-express   1     71e7c7906bfb   tecban-bootcamp   59 minutes ago   364 MB   Scanning...   
+us.icr.io/< namespace >/student57-basic-express   1     71e7c7906bfb   < namespace >   59 minutes ago   364 MB   Scanning...   
 
 OK
 ```
@@ -136,7 +136,7 @@ And now we are able to remove the locally saved images we have created before:
 
 
 ```bash
-docker rmi us.icr.io/tecban-bootcamp/<studentID>-basic-express:1
+docker rmi us.icr.io/< namespace >/<studentID>-basic-express:1
 docker rmi <studentID>-basic-express:1
 ```
 
@@ -144,16 +144,16 @@ and whenever we want to run our container we can just reference the image on the
 
 
 ```bash
-docker run -d -p 600<studentid>:6005 us.icr.io/tecban-bootcamp/<studentID>-basic-express:1
+docker run -d -p 600<studentid>:6005 us.icr.io/< namespace >/<studentID>-basic-express:1
 ```
 
 the output should look something like this:
 
 ```bash
-Unable to find image 'us.icr.io/tecban-bootcamp/student57-basic-express:1' locally
-1: Pulling from tecban-bootcamp/student57-basic-express
+Unable to find image 'us.icr.io/< namespace >/student57-basic-express:1' locally
+1: Pulling from < namespace >/student57-basic-express
 Digest: sha256:71e7c7906bfb1417a0981ddf7b0e19821daadc0753e40c049349ff3eca644a0c
-Status: Downloaded newer image for us.icr.io/tecban-bootcamp/student57-basic-express:1
+Status: Downloaded newer image for us.icr.io/< namespace >/student57-basic-express:1
 7f6970f196264a3e70c7f30ceab55b6d43d38b67c484f1a8f90e98b5f02389e4
 ```
 
