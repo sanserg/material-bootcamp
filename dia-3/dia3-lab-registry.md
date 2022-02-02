@@ -13,13 +13,13 @@ Please make sure to login on your IBM Cloud Account CLI before starting this lab
 Let's download our sample application
 
 ```bash
-$ git clone https://github.com/iagomlgodoy/bootcamp-material
+$ git clone https://github.com/iagomlgodoy/material-bootcamp
 ```
 
 And cd into our dia3-nodeApp
 
 ```bash
-$ cd ./bootcamp-material/dia-3/dia3-nodeApp/
+$ cd ./material-bootcamp/dia-3/dia3-nodeApp/
 ```
 
 This is a basic node-JS express server that will be using to upload to our registry
